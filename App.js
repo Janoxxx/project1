@@ -7,8 +7,8 @@ import convTime from './Components/Time'
 export default class App extends React.Component { 
 
   state = {
-    counterWork: 5,
-    counterBreak: 5,
+    counterWork: 1500,
+    counterBreak: 300,
     work: false,
     active: false,
   }
@@ -74,7 +74,7 @@ export default class App extends React.Component {
         </View>
         <View style={{flexDirection:'row', paddingTop:50, justifyContent:'space-evenly', alignItems:'center'}}> 
           <Text style={{fontSize:30}}>{convTime(this.state.counterWork)}</Text>
-          <Text style={{}}>{convTime(this.state.counterBreak)}</Text>
+          <Text style={{fontSize:30}}>{convTime(this.state.counterBreak)}</Text>
         </View>
         <View style={{justifyContent:'space-between', alignItems:'center', flexDirection: 'row', paddingTop: 20}}>
           <TouchableOpacity style={styles.pauseButton} onPress={this.pause}>

@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 export default function convTime(count) {
-    const reste = count%60;
-    const quotient = (count-reste)/60
+    const reste = (count%60).toString();
+    const quotient = ((count-reste)/60).toString();
     if(quotient<10 && reste<10) {
         return(
             <View>
